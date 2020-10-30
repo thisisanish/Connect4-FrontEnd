@@ -2,6 +2,7 @@ import React,{useEffect,useState} from 'react'
 import queryString from 'query-string'
 import io from 'socket.io-client'
 
+import GameBoard from '../GameBoard/GameBoard'
 
 let socket;
 let ENDPOINT = 'localhost:3001'
@@ -40,6 +41,7 @@ const Game = ({location}) => {
 
 
         // })
+        console.log(userName);
         
     }
     
@@ -50,7 +52,7 @@ const Game = ({location}) => {
             <h2>You are {userName}</h2>
             <input type="text" name="position" id="position" placeholder ='position' onChange={(e)=>setPosition(e.target.value)}/>
             <button type="submit" onClick={handlePositionSubmit}>Submit</button>
-            
+            <GameBoard playablePosition={playablePosition} userName={userName} board={board}/>
         </div>
     )
 }

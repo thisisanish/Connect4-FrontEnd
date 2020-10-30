@@ -1,0 +1,22 @@
+.cell{
+    background-color:#999999;
+    padding: 2rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    
+}
+.head-cell{
+    background-color: sandybrown;
+    padding: 2rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+
+}
+.blue{
+    background-color:aqua;
+}
+.red{
+    background-color: red;
+}
