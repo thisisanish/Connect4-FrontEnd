@@ -1,22 +1,49 @@
 .cell{
-    background-color:#999999;
-    padding: 2rem;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 100%;
-    
-}
-.head-cell{
-    background-color: sandybrown;
-    padding: 2rem;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 100%;
+    background-color:whitesmoke;
 
-}
-.blue{
-    background-color:aqua;
+    /* width: 100%; */
+    width: 90%;
+    /* height: 6vw; */
+    padding-bottom: 80%;
+    border-style: dashed;
+    margin: 2%;
+    border-radius: 50%;
+    /* background-image: url("./red.png"); */
+    /* height: 2rem; */
+    box-shadow:2px 2px 10px grey;  
+}   
+
+.yellow{
+    background-color:yellow ;
 }
 .red{
     background-color: red;
+}
+
+.btnO{
+    width: 90%;
+    padding-bottom:  80%;
+    position: relative;
+    box-shadow:2px 2px 10px grey;  
+}
+i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+table th, table td{
+    background-color: transparent;
+    
+
+}
+.game h1{
+    background-color:purple;
+    padding: 0.5%;
+    border-radius: 50px;
+    margin-top: 2%;
+    
+}
+.game{
+    padding-bottom: 2%;
 }
