@@ -2,17 +2,28 @@ import './GameBoard.css'
 import React from 'react'
 
 
-const GameBoard = ({board,userName, playablePosition}) => {
-    console.log(board);
-    console.log(userName);
-    let TheBoard =()=> board.map((row) => <tr>{row.map((element=><td ><div className={element==userName?" cell red":element==0?"cell":"cell blue"}></div></td>))}</tr>)
+const GameBoard = ({board,userName, playablePosition,handlePositionSubmit}) => {
+    // console.log(board);
+    // console.log(userName);
+
+    const handleDrop =(e)=>{
+        // console.log(e);
+        // console.log(e.currentTarget);
+        handlePositionSubmit(e.currentTarget.name)
+
+    }
+
+    let TheBoard =()=> board.map((row) => <tr >{row.map((element=><td width="80rem"><div className={element===userName?"cell col red":element===0?"cell col":"cell col yellow"}>  </div></td>))}</tr>)
+    
     let PlayablePosition = () =>{
-        return playablePosition.map((element)=>{
-            return <td><div className={element==0?"head-cell":"cell blue"}></div></td>
+        // console.log(playablePosition);
+        return playablePosition.map((element,index)=>{
+            console.log(element,index);
+            return <td  align="center" cli><button  onClick={(e)=>handleDrop(e)} name={index} className= {element!==0?"btn btnO rounded-pill btn-warning":"btn btnO disabled rounded-pill btn-warning"}><i name={index} className="fa fa-lg fa-arrow-circle-down"/></button></td>
         })
     }
     return (
-        <table>
+        <table  className="center table-hover"  cellSpacing="0" >
             <tr>
                 <PlayablePosition/>
             </tr>

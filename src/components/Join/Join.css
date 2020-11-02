@@ -1,0 +1,9 @@
+.join{
+    
+    background-color: purple;
+    min-height: 60vh;
+    padding: 3%;
+    margin: 5%;
+    width: 90%;
+    border-radius: 5px;
+}
