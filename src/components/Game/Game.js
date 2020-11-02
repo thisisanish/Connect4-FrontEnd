@@ -5,7 +5,8 @@ import io from 'socket.io-client'
 import GameBoard from '../GameBoard/GameBoard'
 
 let socket;
-let ENDPOINT = 'localhost:3001'
+// let ENDPOINT = 'localhost:3001'
+let ENDPOINT = "https://limitless-stream-82462.herokuapp.com/"
 
 const Game = ({location}) => {
     const [userName,setUserName] = useState('')
